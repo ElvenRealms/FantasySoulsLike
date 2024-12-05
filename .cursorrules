@@ -1,0 +1,121 @@
+**Project Summary:**
+
+Develop a 3D third-person action fantasy game demo in Unity, focusing on creating a "souls-like" combat system. 
+This project emphasizes challenging combat mechanics and related systems, streamlining other game elements to showcase proficiency in gameplay programming and system design within the Unity engine.
+
+**General Unity and Coding Instructions for AI Coder:**
+
+1. **Coding Standards**
+   - **Language Features:** Use C# best practices and features appropriate for Unity development.
+   - **Clean Code:** Write readable, maintainable code with proper indentation and spacing.
+   - **Comments and Documentation:** Comment code sections to explain complex logic and maintain an up-to-date code documentation.
+
+2. **Performance Optimization**
+   - **Efficient Coding:** Avoid unnecessary computations within Update loops; use FixedUpdate for physics-related updates.
+   - **Garbage Collection:** Minimize allocations to reduce garbage collection overhead.
+   - **Profiling:** Use Unity's Profiler to identify and address performance bottlenecks.
+
+3. **Modular Design**
+   - **Reusable Components:** Develop scripts and systems that can be reused across different game objects.
+   - **Decoupling Systems:** Use events or interfaces to reduce dependencies between systems.
+
+4. **Unity Best Practices**
+   - **Prefab Usage:** Utilize prefabs for all game objects to ensure consistency and easy updates.
+
+5. **Input Management**
+   - **Input System:** Implement Unity's new Input System for handling player controls.
+   - **Responsive Controls:** Ensure that player input results in immediate and smooth character responses.
+
+6. **Testing and Debugging**
+   - **Incremental Testing:** Test features incrementally as they are developed.
+   - **Debug Tools:** Utilize Unity's debugging tools and log outputs to troubleshoot issues.
+
+7. **Version Control**
+   - **Source Control:** Use a version control system like Git to track changes and collaborate effectively.
+   - **Commit Messages:** Write clear and descriptive commit messages for future reference.
+
+8. **Documentation**
+    - **README Files:** Maintain a README with setup instructions and project overview.
+    - **Technical Documentation:** Document systems and workflows for future developers or for personal reference.
+    - **Progress Documentation:** Keep an up to date progress.md file to track the progress of the project.
+
+9. **User Interface**
+    - **UI Elements:** Use Unity's UI system to create health bars, stamina bars, and other HUD elements.
+    - **Responsive Design:** Ensure UI scales correctly across different resolutions.
+
+10. **ScriptableObjects**
+    - **Data Management:** Use ScriptableObjects for managing game data and configurations.
+
+11. **Error Handling**
+    - **Exceptions:** Implement try-catch blocks where appropriate to handle potential errors gracefully.
+    - **Validation:** Validate inputs and states to prevent invalid operations.
+
+12. **Third-Party Tools**
+
+    - **Odin Inspector**
+        - **Foldout Groups:** Use [FoldoutGroup("GroupName")] to organize related fields into collapsible sections in the Inspector for better readability.
+        - **SerializeField:** Apply [SerializeField] to private fields that need to be visible and editable in the Inspector while keeping encapsulation.
+        - **LabelWidth(180):** Set label widths to 180 using [LabelWidth(180)] to maintain consistent and aligned labels in the Inspector.
+        - **ReadOnly:** Use [ReadOnly] on fields that should be visible but not editable in the Inspector, helpful for displaying runtime information.
+        - **Required:** Implement [Required] to ensure essential fields are assigned in the Inspector, preventing null reference exceptions at runtime.
+
+**Development Plan:**
+
+1. **Set Up Character Controller**
+   - Implement a third-person character controller for smooth player movement.
+   - Configure the camera to follow the player with appropriate rotation and positioning.
+
+2. **Implement Movement Mechanics**
+   - Add walking and running capabilities with input controls.
+   - Develop a dodge roll mechanic with invincibility frames and stamina cost.
+   - Include jumping functionality if necessary for combat dynamics.
+
+3. **Design Core Combat System**
+   - Implement light and heavy attack mechanics with distinct animations and effects.
+   - Set up input handling to differentiate between attack types.
+   - Develop blocking mechanics that reduce damage at the cost of stamina.
+   - Create a parrying system that allows players to counterattack if timed correctly.
+
+4. **Create Enemy Characters**
+   - Import or create enemy models and set up their prefabs.
+   - Add necessary components like colliders, rigidbodies, and animators to enemies.
+
+5. **Implement Enemy Combat AI**
+   - Program basic enemy behaviors such as patrolling and detecting the player.
+   - Develop enemy attack patterns and reactions to player actions.
+   - Ensure enemies can perform actions like attacking, blocking, and dodging.
+
+6. **Develop Health and Stamina Systems**
+   - Create health bars for the player and enemies that update during combat.
+   - Implement a stamina system that depletes with actions like attacking and dodging.
+   - Set up stamina regeneration mechanics when not performing stamina-consuming actions.
+
+7. **Add Damage and Collision Detection**
+   - Implement hit detection using colliders and triggers for accurate combat interactions.
+   - Set up damage calculations based on player and enemy stats.
+   - Include feedback for successful hits, such as sound effects and visual cues.
+
+8. **Integrate Combat Animations**
+   - Import combat animations for all player and enemy actions.
+   - Configure Animator Controllers to manage animation states and transitions.
+   - Ensure animations are synced with mechanics like hit detection and stamina usage.
+
+9. **Design Combat UI Elements**
+   - Create UI elements to display health and stamina for the player.
+   - Design enemy health bars that appear when engaged in combat.
+   - Include any additional indicators needed for combat feedback.
+
+10. **Build Test Environment**
+    - Develop simple environments or arenas to test combat mechanics.
+    - Add obstacles or terrain features that affect combat strategies.
+
+11. **Perform Testing and Iteration**
+    - Conduct thorough testing of all combat systems and mechanics.
+    - Identify and fix bugs or issues that arise during testing.
+    - Refine gameplay elements to enhance player experience and combat flow.
+
+12. **Finalize and Polish**
+    - Add visual effects like particle systems for attacks and abilities.
+    - Incorporate sound effects and background music to enhance immersion.
+    - Optimize performance to ensure smooth gameplay.
+    - Prepare the demo for presentation by ensuring all elements are cohesive and functional.
